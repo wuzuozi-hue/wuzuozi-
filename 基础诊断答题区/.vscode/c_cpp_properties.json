@@ -1,0 +1,18 @@
+{
+  "version": 4,
+  "configurations": [
+    {
+      "name": "Windows-Clang-C++17",
+      "compilerPath": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-12\\wdo\\work\\devdocqa-build\\msys\\ucrt64\\bin\\clang++.exe",
+      "compilerArgs": [
+        "-stdlib=libstdc++"
+      ],
+      "cStandard": "c17",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "windows-clang-x64",
+      "includePath": [
+        "${workspaceFolder}/**"
+      ]
+    }
+  ]
+}

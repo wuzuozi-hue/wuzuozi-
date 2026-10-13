@@ -1,0 +1,80 @@
+{
+  "C_Cpp.default.compilerPath": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-12\\wdo\\work\\devdocqa-build\\msys\\ucrt64\\bin\\clang++.exe",
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.intelliSenseMode": "windows-clang-x64",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.encoding": "utf8",
+  "editor.cursorStyle": "line",
+  "editor.cursorBlinking": "blink",
+  "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+  "C_Cpp_Runner.cCompilerPath": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-12\\wdo\\work\\devdocqa-build\\msys\\ucrt64\\bin\\clang.exe",
+  "C_Cpp_Runner.cppCompilerPath": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-12\\wdo\\work\\devdocqa-build\\msys\\ucrt64\\bin\\clang++.exe",
+  "C_Cpp_Runner.debuggerPath": "gdb",
+  "C_Cpp_Runner.cStandard": "c17",
+  "C_Cpp_Runner.cppStandard": "c++17",
+  "C_Cpp_Runner.msvcBatchPath": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Auxiliary/Build/vcvarsall.bat",
+  "C_Cpp_Runner.useMsvc": false,
+  "C_Cpp_Runner.warnings": [
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Wshadow",
+    "-Wformat=2",
+    "-Wcast-align",
+    "-Wconversion",
+    "-Wsign-conversion",
+    "-Wnull-dereference"
+  ],
+  "C_Cpp_Runner.msvcWarnings": [
+    "/W4",
+    "/permissive-",
+    "/w14242",
+    "/w14287",
+    "/w14296",
+    "/w14311",
+    "/w14826",
+    "/w44062",
+    "/w44242",
+    "/w14905",
+    "/w14906",
+    "/w14263",
+    "/w44265",
+    "/w14928"
+  ],
+  "C_Cpp_Runner.enableWarnings": true,
+  "C_Cpp_Runner.warningsAsError": false,
+  "C_Cpp_Runner.compilerArgs": [
+    "-stdlib=libstdc++"
+  ],
+  "C_Cpp_Runner.linkerArgs": [],
+  "C_Cpp_Runner.includePaths": [],
+  "C_Cpp_Runner.includeSearch": [
+    "*",
+    "**/*"
+  ],
+  "C_Cpp_Runner.excludeSearch": [
+    "**/build",
+    "**/build/**",
+    "**/.*",
+    "**/.*/**",
+    "**/.vscode",
+    "**/.vscode/**"
+  ],
+  "C_Cpp_Runner.useAddressSanitizer": false,
+  "C_Cpp_Runner.useUndefinedSanitizer": false,
+  "C_Cpp_Runner.useLeakSanitizer": false,
+  "C_Cpp_Runner.showCompilationTime": false,
+  "C_Cpp_Runner.useLinkTimeOptimization": false,
+  "C_Cpp_Runner.msvcSecureNoWarnings": false,
+  "c-cpp-compile-run.cpp-compiler": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-12\\wdo\\work\\devdocqa-build\\msys\\ucrt64\\bin\\clang++.exe",
+  "c-cpp-compile-run.c-compiler": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-12\\wdo\\work\\devdocqa-build\\msys\\ucrt64\\bin\\clang.exe",
+  "c-cpp-compile-run.cpp-flags": "-std=c++17 -stdlib=libstdc++ -Wall -Wextra -g",
+  "c-cpp-compile-run.output-location": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\CodexCppExtension",
+  "c-cpp-compile-run.mirror-output-location": false,
+  "c-cpp-compile-run.save-before-compile": true,
+  "c-cpp-compile-run.run-in-external-terminal": false,
+  "terminal.integrated.env.windows": {
+    "PATH": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-12\\wdo\\work\\devdocqa-build\\msys\\ucrt64\\bin;${env:PATH}"
+  }
+}

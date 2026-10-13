@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C++：F5运行当前文件",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${env:TEMP}/CodexCppPractice/practice.exe",
+      "cwd": "${workspaceFolder}",
+      "args": [],
+      "env": {
+        "PATH": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-12\\wdo\\work\\devdocqa-build\\msys\\ucrt64\\bin;${env:PATH}"
+      },
+      "terminal": "console",
+      "preLaunchTask": "C++：为F5编译当前文件",
+      "stopOnEntry": false
+    }
+  ]
+}
