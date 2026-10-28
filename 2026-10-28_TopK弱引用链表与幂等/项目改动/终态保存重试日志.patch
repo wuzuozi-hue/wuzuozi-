@@ -1,0 +1,11 @@
+--- a/backend/src/server.cpp
++++ b/backend/src/server.cpp
+@@ -580,6 +580,8 @@
+     auto fail = [self, task, result, error] {
+       // Keep the reservation until durable finalization succeeds. Otherwise a
+       // database outage could admit unbounded work and hide unfinished jobs.
++      LOG_WARN << "job=" << task->id
++         << " stage=terminal_persist_retry retry_after_s=2";
+       self->loop_->runAfter(2, [self, task, result, error] { self->persistFinish(task, result, error); });
+     };
+     if (task->kind == "ingest") {
