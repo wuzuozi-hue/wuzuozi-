@@ -1,0 +1,69 @@
+#include <iostream>
+#include <memory>
+#include <stdexcept>
+#include <vector>
+
+struct ListNode {
+    int val;
+    ListNode* next = nullptr;
+    explicit ListNode(int value) : val(value) {}
+};
+
+// 从非空无环链表中移除倒数第n个节点，并返回新头节点。
+// 题目保证1 <= n <= 链表长度；不能更改节点的val。
+// 本练习由测试区拥有所有节点；函数只修改链表连接，不负责delete节点。
+// 例如1->2->3->4->5，n=2，结果是1->2->3->5。
+ListNode* removeNthFromEnd(ListNode* head, int n) {
+    // TODO：使用哨兵节点和快慢指针，断开目标节点并返回新的头节点。
+    ListNode* fast =head;
+    ListNode* slow =head;
+    for(int i = 0; i<n;i++){
+        fast = fast->next;
+    }
+    while(fast->next!= nullptr){
+        fast = fast->next;
+        slow = slow->next;
+    }
+    slow->next = fast;
+    slow->next->next = nullptr;
+    return head;
+}
+
+// 测试区负责创建、持有和释放节点，不需要修改。
+int main() {
+    struct Case { std::vector<int> values; int n; };
+    const std::vector<Case> cases{
+        {{1, 2, 3, 4, 5}, 2}, {{1, 2}, 2}, {{7}, 1}, {{1, 2}, 1},
+        {{1, 2, 3, 4, 5, 6}, 6}, {{0, 0, 0, 0}, 2},
+        {{-4, -1, 2}, 2}, {{10, 20, 30}, 1}
+    };
+    int passed = 0;
+    for (std::size_t t = 0; t < cases.size(); ++t) {
+        std::vector<std::unique_ptr<ListNode>> nodes;
+        for (int value : cases[t].values) nodes.push_back(std::make_unique<ListNode>(value));
+        for (std::size_t i = 1; i < nodes.size(); ++i) nodes[i - 1]->next = nodes[i].get();
+        const std::size_t removed = nodes.size() - static_cast<std::size_t>(cases[t].n);
+        try {
+            ListNode* cursor = removeNthFromEnd(nodes.front().get(), cases[t].n);
+            bool ok = true;
+            for (std::size_t i = 0; i < nodes.size(); ++i) {
+                if (i == removed) continue;
+                if (cursor != nodes[i].get()) {
+                    ok = false;
+                    break;
+                }
+                cursor = cursor->next;
+            }
+            if (cursor != nullptr) ok = false;
+            for (std::size_t i = 0; i < nodes.size(); ++i) {
+                if (nodes[i]->val != cases[t].values[i]) ok = false;
+            }
+            if (ok) ++passed;
+            std::cout << "case " << t + 1 << ": " << (ok ? "PASS" : "FAIL") << '\n';
+        } catch (const std::exception& e) {
+            std::cout << "case " << t + 1 << ": " << e.what() << '\n';
+        }
+    }
+    std::cout << passed << '/' << cases.size() << " passed\n";
+    return passed == static_cast<int>(cases.size()) ? 0 : 1;
+}
