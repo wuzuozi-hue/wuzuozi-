@@ -18,11 +18,24 @@ struct TreeNode {
     TreeNode* right = nullptr;
     explicit TreeNode(int value) : val(value) {}
 };
+bool midreverse(TreeNode* root, TreeNode* &previous){
+    if(root == nullptr){
+        return true;
+    }
 
+    if(!midreverse(root->left,previous)){
+        return false;
+    }
+    if(previous !=nullptr && previous->val >= root->val){
+        return false;
+    }
+    previous = root;
+    return midreverse(root->right,previous);
+}
 // 可以自行添加辅助函数。
 bool isValidBST(TreeNode* root) {
-    // 在这里实现，保存后我来测试。
-    return false;
+    TreeNode* previous = nullptr;
+    return midreverse(root,previous);
 }
 
 int main() {
